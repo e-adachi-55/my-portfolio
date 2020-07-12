@@ -163,7 +163,7 @@ html {
     font-weight: bold;
     text-align: center;
     margin-bottom: 60px;
-    margin-top: 60px;
+    padding-top: 80px;
 }
 /* アバウト */
 .about_wrapper {
@@ -208,6 +208,148 @@ html {
 .skill p {
     font-size: 1.1rem;
     font-weight: bold;
+}
+/* ワークス */
+.works_container {
+    width: 100%;
+}
+.works_container ul {
+    padding: 0;
+}
+.works_card {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+.works_item {
+    width: calc((100% / 2) - 15px);
+    margin-bottom: 60px;
+    background: #FFF;
+    border-radius: 3px;
+    box-shadow: 0px 3px 6px 0px #9E9E9E;
+}
+.works_item a {
+    text-decoration: none;
+}
+.works_item img {
+    width: 100%;
+}
+.works_wrapper {
+    padding: 15px;
+}
+.works_title {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+.works_wrapper p {
+    display: inline-block;
+    color: #FFF;
+    font-size: .8rem;
+    padding: 7px;
+    border-radius: 45%;
+    margin-right: 10px;
+}
+.html_css {
+    background-color: rgb(255, 139, 189);
+}
+.jQuery {
+    background-color: rgb(255, 142, 94);
+}
+/*ワークス モーダル*/
+.c-modal {
+    display: none;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+}
+/* 黒背景の設定 */
+.c-modal_bg {
+    background: rgba(0, 0, 0, 0.6);
+    height: 100vh;
+    width: 100%;
+}
+/* ウィンドウの設定 */
+.c-modal_content {
+    background: #fff;
+    left: 50%;
+    position: absolute;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 5px;
+    overflow : auto;
+    width: 70%;
+    height: 85%;
+}
+.c-modal_content_inner {
+    position: relative;
+    padding: 24px;
+}
+.c-modal_content_inner img {
+    margin-top: 30px;
+    width: 100%;
+}
+.c-modal_content_inner h2 {
+    font-size: 1.8rem;
+    padding-left: 30px;
+}
+.c-modal_content_inner a {
+    text-decoration: none;
+}
+tr, th, td {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font: inherit;
+    vertical-align: baseline;
+}
+table {
+    border-collapse: collapse;
+    width: 100%;
+    border-spacing: 0;
+}
+td {
+    border-bottom: 1px solid #ebe8e8;
+    width: 50%;
+    font-size: 1.2rem;
+    text-align: left;
+}
+td:first-child {
+    width: 30%;
+}
+td:last-child {
+    width: 70%;
+}
+table tr:last-child td {
+    border:none;
+}
+
+tr > td, tr > td + td{
+    padding: 30px;
+}
+td ul li{
+    list-style: disc;
+    list-style-position: inside;
+}
+.modal_list:hover {
+    background-color: #ebe8e8;
+    cursor: pointer;
+}
+/* 閉じるボタン */
+.c-modal_close {
+    position: absolute;
+    top: 13px;
+    right: 10px;
+}
+footer {
+    background: #FFF;
+}
+footer p {
+    text-align: center;
+    font-size: .8rem;
 }
 
   
