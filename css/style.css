@@ -62,13 +62,7 @@ html {
     position: relative;
     z-index: 2;
     padding: 30px;
-}
-.header__logo a {
-    font-family: cursive;
-    display: block;
-    text-decoration: none;
-    font-size: 1.5rem;
-    color: #333;
+    height: 60px;
 }
 .header__cat {
     display: flex;
@@ -261,7 +255,7 @@ html {
     height: 100vh;
     position: fixed;
     top: 0;
-    width: 100%;
+    width: 100vw;
     top: 0;
     left: 0;
     z-index: 1000;
@@ -270,7 +264,7 @@ html {
 .c-modal_bg {
     background: rgba(0, 0, 0, 0.6);
     height: 100vh;
-    width: 100%;
+    width: 100vw;
 }
 /* ウィンドウの設定 */
 .c-modal_content {
@@ -326,7 +320,6 @@ td:last-child {
 table tr:last-child td {
     border:none;
 }
-
 tr > td, tr > td + td{
     padding: 30px;
 }
@@ -337,6 +330,13 @@ td ul li{
 .modal_list:hover {
     background-color: #ebe8e8;
     cursor: pointer;
+}
+/* 背景を固定する */
+body.fixed {
+	position: fixed;
+	width: 100%;
+	height: 100%;
+	left: 0;
 }
 /* 閉じるボタン */
 .c-modal_close {
@@ -350,6 +350,223 @@ footer {
 footer p {
     text-align: center;
     font-size: .8rem;
+}
+[data-fadeIn] {
+    opacity: 0;
+    transition: all 1.6s;
+    transform: translateY(100px);
+}
+[data-fadeIn].is-over {
+    opacity: 1;
+    transform: translateY(0);
+}
+/* レスポンシブ */
+@media screen and (max-width: 768px) {
+    html {
+        font-size: 16px;
+    }
+    /* ヘッダー */
+    .header__bg {
+        padding: 10px;
+        height: 50px;
+    }
+    /* ヘッダーハンバーガーメニュー */
+    .header__cat input,
+    .header__cat label {
+        display: block;
+    }
+    .header__cat input {
+        display: none;
+    }
+    .header__cat label {
+        position: absolute;
+        right: 10px;
+        clear: both;
+        margin-top: 10px;
+    }
+    span.hamburger__icon {
+        display: inline-block;
+        width: 35px;
+        height: 25px;
+    }
+    span.hamburger__icon i {
+        position: absolute;
+        width: 100%;
+        height: 2px;
+        background-color: #333f;
+        display: block;
+        transition: all .3s ease-in-out;
+    }
+    span.hamburger__icon i:nth-child(1) {
+        top: 0;
+    }
+    span.hamburger__icon i:nth-child(2) {
+        margin: auto;
+        top: 0;
+        bottom: 0;
+    }
+    span.hamburger__icon i:nth-child(3) {
+        bottom: 0;
+    }
+    .header__cat input:checked + label span.hamburger__icon i:nth-child(1) {
+        margin: auto;
+        transform: rotate(45deg);
+        right: 0;
+        bottom: 0;
+        left: 0;
+        top: 0;
+    }
+    .header__cat input:checked + label span.hamburger__icon i:nth-child(2) {
+        transform: rotateX(90deg);
+        top: 0;
+        bottom: 0;
+    }
+    .header__cat input:checked + label span.hamburger__icon i:nth-child(3) {
+        margin: auto;
+        transform: rotate(-45deg);
+        top: 0;
+        right: 0;
+        bottom: 0;
+    }
+    .header__cat input:checked ~ .header__navi {
+        z-index: 99;
+        opacity: 1;
+        transform: translateX(0);
+    }
+    .header__navi {
+        position: fixed;
+        opacity: 0;
+        background-color: rgba(255, 255, 255, 0.7);
+        top: 50px;
+        right: 0;
+        transform: translateX(100%);
+        bottom: 0;
+        left: 0;
+        z-index: -1;
+        transition: all 1s ease-out;
+    }
+    .header__navi__wrap {
+        width: 100%;
+        background-color: #fff;
+        position: absolute;
+        right: 0;
+        top: 0px;
+        bottom: 0;
+        transition-duration: 1s;
+        transition-property: right;
+        overflow-y: scroll;
+    }
+    .header__cat input:checked ~ .header__navi .header__navi__wrap {
+        right: 0;
+    }
+    .header__navi__list {
+        margin: 0;
+        display: block;
+        justify-content: inherit;
+    }
+    .header__navi__item a {
+        padding: 0 50px;
+        color: #000;
+        font-size: 24px;
+        height: 100px;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: center;
+        font-weight: 700;
+        line-height: 1;
+        transition: background-color .3s ease-in-out;
+    }
+    .mainKv {
+        height: 100vh;
+        background-position: center right -200px;
+    }
+    .mainKv__title {
+        width: 100%;
+        text-align: center;
+        font-size: 2.6rem;
+    }
+    /* メインコンテンツ */
+    .mainContent__inner {
+        padding: 60px 24px 0;
+    }
+    .contents_title {
+        font-size: 1.8rem;
+        font-weight: bold;
+        text-align: center;
+        margin-bottom: 60px;
+        padding-top: 80px;
+    }
+    /* アバウト */
+    .about_wrapper {
+        display: block;
+    } 
+    .about_img {
+        width: 100%;
+        margin-bottom: 15px;
+    }
+    .about_text {
+        width: 100%;
+    }
+    /* スキル */
+    .skills_card .skill {
+        width: calc(100% / 2);
+    }
+    .skill img{
+        width: 85px;
+    }
+    .skill p {
+        font-size: .8rem;
+        font-weight: bold;
+    }
+    /* ワークス */
+    .works_card {
+        display: block;
+    }
+    .works_item {
+        width: 90%;
+        background: #FFF;
+        border-radius: 3px;
+        box-shadow: 0px 3px 6px 0px #9E9E9E;
+        margin: 0 auto 40px;
+    }
+    .works_title {
+        font-size: 1.2rem;
+    }
+    .works_wrapper p {
+        font-size: .6rem;
+    }
+    .c-modal_content_inner h2 {
+        font-size: 1.2rem;
+    }
+    .modal_list td {
+        font-size: .8rem;
+    }
+    .modal_list td:first-child {
+        font-weight: bold;
+    }
+    table th,
+    table td{
+      display: block;
+    }
+    tr > td, tr > td + td{
+        padding: 10px;
+    }
+    td {
+        width: 100%;
+        font-size: 1.2rem;
+        border: none;
+    }
+    td:first-child {
+        width: 100%;
+    }
+    td:last-child {
+        width: 100%;
+    }
+    tr > td, tr > td + td{
+        padding: 10px;
+    }
+
 }
 
   

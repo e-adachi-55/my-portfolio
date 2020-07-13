@@ -38,11 +38,8 @@
             <h1 class="mainKv__title">my portfolio</h1>
         </section>
 
-        <!-- メインコンテンツエリア -->
-        <section class="mainContent">
-
             <!-- about -->
-            <section class="about">
+            <section class="about mainContent" data-fadeIn>
                 <h1 class="contents_title" id="about">about</h1>
                 <div class="about_wrapper">
                     <div class="about_img">
@@ -57,7 +54,7 @@
             </section>    
 
             <!-- skills -->
-            <section class="skills">
+            <section class="skills mainContent" data-fadeIn>
                 <h1 class="contents_title" id="skills">skills</h1>
                 <div class="skills_container">
                     <ul class="skills_card">
@@ -94,8 +91,8 @@
             </section>
 
             <!-- works -->
-            <section class="works">
-            <h1 class="contents_title" id="works">works</h1>
+                <div class="mainContent">
+                    <h1 class="contents_title" id="works">works</h1>
                 <div class="works_container">
                     <!-- modal open -->
                     <ul class="works_card">
@@ -158,14 +155,15 @@
                                 </div>
                             </a>
                         </li>
-                    </ul>   
-
+                    </ul>  
+                </div>
+             
                     <!-- modal -->
                     <div id="modal06" class="c-modal js-modal">
                         <div class="c-modal_bg js-modal-close"></div>
                         <div class="c-modal_content _lg">
                             <div class="c-modal_content_inner">
-                                    <img src="img/works_06.png" alt="">
+                                <img src="img/works_06.png" alt="">
                                 <h2>架空ECサイト</h2>
                                 <table>
                                     <tr class="modal_list">
@@ -416,7 +414,6 @@
                 </div>     
             </section>
 
-        </section>    
     </main>
 
     <footer>
