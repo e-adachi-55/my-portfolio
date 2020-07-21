@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crista Design.</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&family=Roboto:wght@400;700&display=swap"
+      rel="stylesheet">
+</head>
+<body>
+    <header class="header">
+        <div class="header_bg" id="header">
+        <h1 class="site_title">クリ★スタ</h1>
+        <nav>
+        <div id="navi">
+            <ul class="header_nav">
+                <li><a href="#about">About</a></li>
+                <li><a href="#service">Service</a></li>
+                <li><a href="#news">News</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </div>
+        </nav>
+    
+    <!-- ボタン部分ここを後で追加するだけ-->
+    <div class="nav_btn" id="nav_btn">
+      <span class="hamburger_line hamburger_line1"></span>
+      <span class="hamburger_line hamburger_line2"></span>
+      <span class="hamburger_line hamburger_line3"></span>
+    </div>
+    <div class="nav_bg" id="nav_bg"></div>
+    <!-- /ボタン部分ここを後で追加するだけ-->
+      
+    </div>
+        <div class="header_fv">
+            <div class="fv_img_pc"></div>
+            <div class="fv_img_sp"></div>
+                <p class="fv_title">Cresta Design.</p>
+        </div>
+    </header>
+    <div class="container">
+        <section class="about" id="about">
+            <h1 class="contents_title">About</h1>
+            <h2 class="sub_title">ミニマルで<br>洗練されたデザインを。</h2>
+            <p class="text">近年、ミニマルなデザインが流行しています。そこで弊社では、クライアント企業様新規サービス等の課題に対してミニマルで洗練されたデザインを実現させることで解決のサポートを致します。もちろん全てのサービスにおいてミニマルなデザインが課題解決になるわけではないので、課題や今後のサービスの展開等しっかりとヒアリングを行なった上でご提案させて頂きます。</p>
+        </section>
+        <section class="service" id="service">
+            <h1 class="contents_title">Service</h1>
+            <div class="service_contents">
+                <div class="service_text">
+                    <h2 class="sub_title">リリース時のサポートで<br>サービスのブランディングを</h2>
+                    <p class="text">弊社では、リリース時もサポートさせて頂きます。プレスリリース用のサイトや動画制作を通して、サービスのブランディングを行わせて頂きます。</p>
+                </div>
+                <div class="service_img">
+                    <img src="img/service-image@2x.jpg" alt="">
+                </div>
+                <div class="service_text2">
+                    <h2 class="sub_title">リリース後のサポートで<br>効果を最大化させる</h2>
+                    <p class="text">弊社では、リリース後もサポートさせて頂きます。サービスはリリース後に様々な課題にぶつかります。そこでクライアント様と一緒に改善を行うことで、デザインの効果を最大化させます。</p>
+                </div>
+                <div class="service_img2">
+                    <img src="img/service-image02@2x.jpg" alt="">
+                </div>
+            </div>
+        </section>
+        <section class="news" id="news">
+            <h1 class="contents_title">News</h1>
+            <ul class="news_contents">
+                <li class="news_card">
+                    <img src="img/card-image1@2x.jpg" alt="">
+                    <p class="news_text">新規サイトを公開しました。今回のサイトは白と黒を基調にしたミニマルなデザインになっています。</p>
+                </li>
+                <li class="news_card">
+                    <img src="img/card-image2@2x.jpg" alt="">
+                    <p class="news_text">新規サイトを公開しました。今回のサイトは白と黒を基調にしたミニマルなデザインになっています。</p>
+                </li>
+                <li class="news_card">
+                    <img src="img/card-image3@2x.jpg" alt="">
+                    <p class="news_text">新規サイトを公開しました。今回のサイトは白と黒を基調にしたミニマルなデザインになっています。</p>
+                </li>
+            </ul>
+        </section>
+        <section class="contact" id="contact">
+            <h1 class="contact_title">お問い合わせ</h1>
+            <form action="">
+                <label for="name">担当者名</label>
+                <input type="name" id="name" name="name">
+                <label for="tel">電話番号</label>
+                <input type="tel" id="tel" name="tel">
+                <label for="mail">メールアドレス</label>
+                <input type="email" id="mail" name="mail">
+                <label for="text">お問い合わせ内容</label>
+                <textarea type="text" name="text" id="text" cols="30" rows="10"></textarea>
+                <button class="btn">送信</button>
+            </form>
+        </section>
+    </div>
+    <footer class="footer">
+        <p>©︎crest.design all rights reserved</p>
+    </footer>
+    <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
+    <script>
+        (function ($) {
+        
+        
+        /* ------------------------------- */
+        
+        })(jQuery);
+        
+        
+        /* SP menu */
+        function toggleNav() {
+        var body = document.body;
+        var hamburger = document.getElementById('nav_btn');
+        var blackBg = document.getElementById('nav_bg');
+        
+        hamburger.addEventListener('click', function() {
+            body.classList.toggle('nav_open'); //メニュークリックでnav-openというクラスがbodyに付与
+        });
+        blackBg.addEventListener('click', function() {
+            body.classList.remove('nav_open'); //もう一度クリックで解除
+        });
+        }
+        toggleNav();
+    </script>   
+</body>
+</html>
