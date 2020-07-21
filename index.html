@@ -75,6 +75,10 @@
                             <p>Vue.js</p>
                         </li>
                         <li class="skill">
+                            <img src="img/icons8-react.png">
+                            <p>React.js</p>
+                        </li>
+                        <li class="skill">
                             <img src="img/icons8-php-ロゴ-30.png" alt="">
                             <p>PHP</p>
                         </li>
@@ -93,9 +97,18 @@
             <!-- works -->
                 <div class="mainContent">
                     <h1 class="contents_title" id="works">works</h1>
-                <div class="works_container">
+                <div class="works_container" data-fadeIn>
                     <!-- modal open -->
                     <ul class="works_card">
+                        <li class="works_item">
+                            <a class="js-modal-open" href="" data-target="modal07">
+                                <img src="img/works_07.png" alt="">
+                                <div class="works_wrapper">
+                                    <h2 class="works_title">チャットボット</h2>
+                                    <p class="react">React.js</p>
+                                </div>
+                            </a>
+                        </li>
                         <li class="works_item">
                             <a class="js-modal-open" href="" data-target="modal06">
                                 <img src="img/works_06.png" alt="">
@@ -159,6 +172,49 @@
                 </div>
              
                     <!-- modal -->
+                    <div id="modal07" class="c-modal js-modal">
+                        <div class="c-modal_bg js-modal-close"></div>
+                        <div class="c-modal_content _lg">
+                            <div class="c-modal_content_inner">
+                                <img src="img/works_07.png" alt="">
+                                <h2>チャットボット</h2>
+                                <table>
+                                    <tr class="modal_list">
+                                        <td>ポイント</td>
+                                        <td>
+                                            <ul>
+                                                <li>create-react-appを使用した環境構築</li>
+                                                <li>Material-UIのスタイル変更</li>
+                                                <li>お問い合わせ内容から送信するボタンを押すとSlack通知される</li>
+                                            </ul>
+                                        </td>
+                                    </tr>
+                                    <tr class="modal_list">
+                                        <td>サイトURL</td>
+                                        <td><a href="works/07/index.html" target="_blank">https://e-adachi/works/07/index.html</a></td>
+                                    </tr>
+                                    <tr class="modal_list">
+                                        <td>GitHub</td>
+                                        <td><a href="https://github.com/e-adachi-55/chatbot" target="_blank">https://github.com/e-adachi-55/chatbot</a></td>
+                                    </tr>
+                                    <tr class="modal_list">
+                                        <td>担当箇所</td>
+                                        <td>コーディングのみ</td>
+                                    </tr>
+                                    <tr class="modal_list">
+                                        <td>言語・ツール</td>
+                                        <td>React.js</td>
+                                    </tr>
+                                    <tr class="modal_list">
+                                        <td>制作時間</td>
+                                        <td>38時間</td>
+                                    </tr>
+                                </table>
+                                <a class="js-modal-close c-modal_close" href=""><span>✕</span></a>
+                            </div>
+                        </div>
+                    </div>
+
                     <div id="modal06" class="c-modal js-modal">
                         <div class="c-modal_bg js-modal-close"></div>
                         <div class="c-modal_content _lg">
